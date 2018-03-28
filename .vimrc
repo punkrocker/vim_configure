@@ -1,5 +1,8 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
+set runtimepath+=~/.vim
+colorscheme nasm
+filetype on	" required
+au BufRead,BufNewFile *.asm set filetype=nasm
 
 set nu
 syntax enable
@@ -21,6 +24,7 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrolloose/nerdtree'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
